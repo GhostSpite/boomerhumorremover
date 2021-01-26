@@ -1,0 +1,12 @@
+#content {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.col-sm.h3 {
+	margin: auto;
+	width: 50%;
+	border: 3px solid green;
+	padding: 10px;
+}
