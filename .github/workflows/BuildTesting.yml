@@ -23,7 +23,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version}}
       - name: Install/Build/Test
-      - run: npm ci
-      - run: npm build
-      - run: npm format-check
-      - run: npm test
+        run: 
+          npm ci
+          npm build
+          npm format-check
+          npm test
