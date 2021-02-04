@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest]
-        node-version: [14.x, 15.x]
+        node-version: [14.x]
         
     steps:
       - uses: actions/checkout@v2
@@ -23,8 +23,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version}}
       - name: Install/Build/Test
-        run: 
-          npm install
-          npm run build
-          npm test
-        
+      - run: npm ci
+      - run: npm build
+      - run: npm format-check
+      - run: npm test
